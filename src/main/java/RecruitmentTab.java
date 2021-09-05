@@ -30,7 +30,7 @@ public class RecruitmentTab {
     String middleName = "Paul";
     String lastName = "Jefferson";
     String vacancy = "Senior QA Lead";
-    String file = "src/main/resources/Testing file.docx";
+   // String file = "src/main/resources/Testing file.docx";
 
     public void goToRecruitmentTab() {
         MainPage.RECRUITMENT_TAB.click();
@@ -51,7 +51,7 @@ public class RecruitmentTab {
             EMAIL.should(Condition.exist).setValue("email@email.com");
             CONTACT_NO.setValue("123456789");
             JOB_VACANCY.selectOptionContainingText(vacancy);
-            RESUME.uploadFile(new File(file));
+       //     RESUME.uploadFile(new File(file));
             KEYWORDS.setValue("QA");
             COMMENT.setValue("TestTestTest TestTestTest");
             DATE_OF_APP.setValue("2021-02-03");
