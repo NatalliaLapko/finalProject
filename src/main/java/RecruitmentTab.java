@@ -3,6 +3,8 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import utils.Log;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class RecruitmentTab {
@@ -28,8 +30,7 @@ public class RecruitmentTab {
     String middleName = "Paul";
     String lastName = "Jefferson";
     String vacancy = "Senior QA Lead";
-    String candidateName = firstName + " " + lastName;
-    String file = "C:\\Users\\USER\\finalProject\\src\\main\\resources\\Testing file.docx";  // по возможности вынести в отдельный класс или проперти
+    String file = "src/main/resources/Testing file.docx";
 
     public void goToRecruitmentTab() {
         MainPage.RECRUITMENT_TAB.click();
@@ -50,7 +51,7 @@ public class RecruitmentTab {
             EMAIL.should(Condition.exist).setValue("email@email.com");
             CONTACT_NO.setValue("123456789");
             JOB_VACANCY.selectOptionContainingText(vacancy);
-            RESUME.sendKeys(file);
+            RESUME.uploadFile(new File(file));
             KEYWORDS.setValue("QA");
             COMMENT.setValue("TestTestTest TestTestTest");
             DATE_OF_APP.setValue("2021-02-03");

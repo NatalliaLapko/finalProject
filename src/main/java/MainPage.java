@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import utils.Log;
@@ -46,7 +47,7 @@ public class MainPage {
         Log.info("Log out the system");
         try {
             WELCOME_MENU.click();
-            LOGOUT.click();
+            LOGOUT.should(Condition.appear).click();
             Log.info("User log out successfully.");
         } catch (Exception e) {
             Log.error("User doesn't logout the system. ERROR:", e.getCause());

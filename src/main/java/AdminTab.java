@@ -5,8 +5,10 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import utils.Log;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.Wait;
+
 
 public class AdminTab {
 
@@ -35,9 +37,9 @@ public class AdminTab {
 
 
     String pass = "1ghdf[]dlkfcr4562";
-    String file = "C:\\Users\\USER\\finalProject\\src\\main\\resources\\Testing file.docx";
+    String file = "src/main/resources/Testing file.docx";
     String employeeName = "Jadine Jackie";
-    String userName = "Jack Jackson";
+    String userName = "Kim Wotson";
 
 
     @Step("Add new user")
@@ -139,7 +141,7 @@ public class AdminTab {
             JOB_TITLE.should(Condition.exist).setValue(jobTitle);
             JOB_DESCRIPTION.setValue("Test test test test test test test test");
             NOTE.setValue("NoteNoteNoteNote");
-            JOB_SPECIFICATION.sendKeys(file);
+            JOB_SPECIFICATION.uploadFile(new File(file));
             SAVE_BTN.click();
             Log.info("Job title '" + jobTitle + "' was created successfully.");
         } catch (Exception e) {
