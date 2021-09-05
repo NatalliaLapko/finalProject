@@ -22,7 +22,7 @@ public class Tests {
 
     @BeforeEach
     @DisplayName("LogIn")
-    public void login() {
+    public void loginTest() {
         loginPage.openLoginPage();
         loginPage.login();
         assertEquals(Links.DASHBOARD_URL, url(), "The page wou need wasn't opened!");
@@ -30,7 +30,7 @@ public class Tests {
 
     @AfterEach
     @DisplayName("LogOut")
-    public void logout() {
+    public void logoutTest() {
         mainPage.logout();
     }
 
@@ -43,7 +43,7 @@ public class Tests {
     @Test
     @Order(1)
     @Flaky
-    public void addUser() {
+    public void addUserTest() {
         mainPage.goToAdminTab();
         adminTab.addUser();
         mainPage.goToAdminTab();
@@ -61,7 +61,7 @@ public class Tests {
     @Test
     @Order(2)
     @Flaky
-    public void deleteUser() {
+    public void deleteUserTest() {
         mainPage.goToAdminTab();
         adminTab.createdUserSearch();
         adminTab.deleteUser();
@@ -79,7 +79,7 @@ public class Tests {
     @Test
     @Order(3)
 
-    public void addJobTitle() {
+    public void addJobTitleTest() {
         mainPage.goToAdminTab();
         adminTab.goToJobTab();
         assertEquals(Links.VIEV_JOB_TITLES_LIST, url());
@@ -105,7 +105,7 @@ public class Tests {
     @Test
     @Order(4)
 
-    public void deleteJobTitle() {
+    public void deleteJobTitleTest() {
         mainPage.goToAdminTab();
         adminTab.goToJobTab();
         adminTab.findJobTitle("QA");
@@ -129,7 +129,7 @@ public class Tests {
     @Severity(SeverityLevel.CRITICAL)
     @Test
     @Order(5)
-    public void addCandidate() {
+    public void addCandidateTest() {
 
         recruitmentTab.goToRecruitmentTab();
         recruitmentTab.goToCandidateTab();
@@ -152,7 +152,7 @@ public class Tests {
     @Severity(SeverityLevel.CRITICAL)
     @Test
     @Order(6)
-    public void assignLeave() {
+    public void assignLeaveTest() {
         leaveTab.goToLeaveTab();
         leaveTab.assignLeave();
         leaveTab.fillLeaveForm();
@@ -168,7 +168,7 @@ public class Tests {
     @Severity(SeverityLevel.CRITICAL)
     @Test
     @Order(7)
-    public void doDashboardElementsExist() {
+    public void doDashboardElementsExistTest() {
 
         dashboard.isElementsExist1();
         dashboard.isElementsExist2();
@@ -190,7 +190,7 @@ public class Tests {
     @Severity(SeverityLevel.CRITICAL)
     @Test
     @Order(8)
-    public void dashLinksVerification() {
+    public void dashLinksVerificationTest() {
         dashboard.isElementsExist1();
         dashboard.verifyAssignLeaveLink();
         assertEquals(Links.ASSIGN_LEAVE, url());
@@ -224,7 +224,7 @@ public class Tests {
     @Severity(SeverityLevel.NORMAL)
     @Test
     @Order(9)
-    public void testOdisProfile() {
+    public void testOdisProfileTest() {
 
         pim.goToPimTab();
         pim.openOdisPage();
