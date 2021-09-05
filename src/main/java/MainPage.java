@@ -6,12 +6,8 @@ import utils.Log;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainPage {
-    public static SelenideElement BUZZ_TAB = $("a#menu_buzz_viewBuzz");
-    public static SelenideElement MAINTENANCE_TAB = $("a#menu_maintenance_purgeEmployee");
-    public static SelenideElement DIRECTORY_TAB = $("a#menu_directory_viewDirectory");
+
     public static SelenideElement DASHBOARD_TAB = $("a#menu_dashboard_index");
-    public static SelenideElement MY_INFO_TAB = $("a#a#menu_pim_viewMyDetails");
-    public static SelenideElement TIME_TAB = $("a#menu_time_viewTimeModule");
     public static SelenideElement LEAVE_TAB = $("a#menu_leave_viewLeaveModule");
     public static SelenideElement PIM_TAB = $("a#menu_pim_viewPimModule");
     public static SelenideElement ADMIN_TAB = $("a#menu_admin_viewAdminModule");

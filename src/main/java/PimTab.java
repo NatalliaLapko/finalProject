@@ -19,7 +19,7 @@ public class PimTab {
     public static SelenideElement NATIONALITY = $("#personal_cmbNation");
     public static SelenideElement MARITAL_STATUS = $("#personal_cmbMarital");
     public static SelenideElement EMPLOYEE_PHOTO = $("#empPic");
-    public static SelenideElement SMOKER_FLAG = $("#personal_chkSmokeFlag");
+
 
 
     @Step("Verify user")

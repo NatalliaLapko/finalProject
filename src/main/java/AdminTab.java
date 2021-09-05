@@ -19,7 +19,7 @@ public class AdminTab {
     public static SelenideElement USER_STATUS = $("#systemUser_status");
     public static SelenideElement PASSWORD = $("input#systemUser_password");
     public static SelenideElement CONFIRM_PASSWORD = $("input#systemUser_confirmPassword");
-    public static SelenideElement SAVE_BTN = $("#btnSave");
+    public static SelenideElement SAVE_BTN = $("input#btnSave");
 
     public static SelenideElement JOB_TAB = $("#menu_admin_Job");
     public static SelenideElement ADD_BTN_JOB_TITLE = $("#btnAdd");
@@ -37,9 +37,9 @@ public class AdminTab {
 
 
     String pass = "1ghdf[]dlkfcr4562";
-  //  String file = "src/main/resources/Testing file.docx";
+    String file = "src/main/resources/Testing file.docx";
     String employeeName = "Jadine Jackie";
-    String userName = "John Green";
+    String userName = "ane Smith";
 
 
     @Step("Add new user")
@@ -54,7 +54,7 @@ public class AdminTab {
             PASSWORD.should(Condition.exist).setValue(pass);
             CONFIRM_PASSWORD.should(Condition.exist).setValue(pass);
             SAVE_BTN.shouldBe(Condition.visible).click();
-            SEARCH_BTN.waitUntil(Condition.appear,6000);
+            SEARCH_BTN.waitUntil(Condition.appear,8000);
 
             Log.info("User was successfully created!");
         } catch (Exception e) {
@@ -141,7 +141,7 @@ public class AdminTab {
             JOB_TITLE.should(Condition.exist).setValue(jobTitle);
             JOB_DESCRIPTION.setValue("Test test test test test test test test");
             NOTE.setValue("NoteNoteNoteNote");
-         //   JOB_SPECIFICATION.uploadFile(new File(file));
+            JOB_SPECIFICATION.uploadFile(new File(file));
             SAVE_BTN.click();
             Log.info("Job title '" + jobTitle + "' was created successfully.");
         } catch (Exception e) {

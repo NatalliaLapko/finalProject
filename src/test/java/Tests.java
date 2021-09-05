@@ -242,8 +242,8 @@ public class Tests {
                 () -> assertEquals("American", pim.getNationality()),
                 () -> assertEquals("1980-05-05", pim.getDateOfBirth()),
                 () -> assertEquals(true, PimTab.MALE_RADIO.isSelected()),
-                () -> assertEquals(false, PimTab.FEMALE_RADIO.isSelected()),
-                () -> assertEquals(false, PimTab.SMOKER_FLAG.isSelected())
+                () -> assertEquals(false, PimTab.FEMALE_RADIO.isSelected())
+
         );
 
 
