@@ -234,10 +234,10 @@ public class Tests {
                 () -> assertEquals("Adalwin", pim.getLastName()),
                 () -> assertEquals("0002", pim.getEmployeeID()),
                 () -> assertEquals("QZ45232222", pim.getDriverLicenseNumber()),
-                () -> assertEquals("2016-02-01", pim.getLicenseExpiryDate()),
+                () -> assertEquals("01-02-2016", pim.getLicenseExpiryDate()),
                 () -> assertEquals("Married", pim.getMaritalStatus()),
                 () -> assertEquals("American", pim.getNationality()),
-                () -> assertEquals("1980-05-05", pim.getDateOfBirth()),
+                () -> assertEquals("05-05-1980", pim.getDateOfBirth()),
                 () -> assertEquals(true, PimTab.MALE_RADIO.isSelected()),
                 () -> assertEquals(false, PimTab.FEMALE_RADIO.isSelected()),
                 () -> assertEquals(false, PimTab.SMOKER_FLAG.isSelected())

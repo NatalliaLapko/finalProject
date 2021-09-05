@@ -46,8 +46,8 @@ public class LeaveTab {
         try {
             EMPLOYEE_NAME.should(Condition.exist).setValue(employeeName);
             LEAVE_TYPE.should(Condition.exist).selectOptionContainingText("CAN - Vacation");
-            FROM_DATE.should(Condition.exist).setValue("2021-09-10");
-            TO_DATE.should(Condition.exist).setValue("2021-10-10");
+            FROM_DATE.should(Condition.exist).setValue("10-09-2021");
+            TO_DATE.should(Condition.exist).setValue("10-10-2021");
             COMMENT.setValue("Happy vacation!");
             PARTIAL_DAYS.selectOptionContainingText("Start Day Only");
             START_DAY_DAY.should(Condition.appear).selectOptionContainingText("Half Day");
