@@ -23,6 +23,8 @@ public class Tests {
     @BeforeEach
     @DisplayName("LogIn")
     public void loginTest() {
+        
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
         loginPage.openLoginPage();
         loginPage.login();
         assertEquals(Links.DASHBOARD_URL, url(), "The page wou need wasn't opened!");
