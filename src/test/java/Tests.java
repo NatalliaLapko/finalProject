@@ -1,5 +1,7 @@
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
@@ -23,7 +25,6 @@ public class Tests {
     @BeforeEach
     @DisplayName("LogIn")
     public void loginTest() {
-        
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
         loginPage.openLoginPage();
         loginPage.login();
