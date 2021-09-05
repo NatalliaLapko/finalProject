@@ -46,7 +46,7 @@ public class Tests {
     public void addUserTest() {
         mainPage.goToAdminTab();
         adminTab.addUser();
-        mainPage.goToAdminTab();
+
         adminTab.createdUserSearch();
         adminTab.verifyCreatedUser();
         assertEquals(adminTab.userName, adminTab.getFoundUserName());
@@ -158,7 +158,7 @@ public class Tests {
         leaveTab.fillLeaveForm();
         leaveTab.goToLeaveList();
         leaveTab.checkLeave();
-        assertEquals("John Smith", leaveTab.checkLeave());
+        assertEquals(leaveTab.employeeName, leaveTab.checkLeave());
     }
 
 
