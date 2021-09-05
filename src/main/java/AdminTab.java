@@ -1,10 +1,12 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.commands.WaitUntil;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import utils.Log;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.Wait;
 
 public class AdminTab {
 
@@ -35,7 +37,7 @@ public class AdminTab {
     String pass = "1ghdf[]dlkfcr4562";
     String file = "C:\\Users\\USER\\finalProject\\src\\main\\resources\\Testing file.docx";
     String employeeName = "Jadine Jackie";
-    String userName = "Bob Dylan";
+    String userName = "Jack Jackson";
 
 
     @Step("Add new user")
@@ -50,6 +52,8 @@ public class AdminTab {
             PASSWORD.should(Condition.exist).setValue(pass);
             CONFIRM_PASSWORD.should(Condition.exist).setValue(pass);
             SAVE_BTN.shouldBe(Condition.visible).click();
+            SEARCH_BTN.waitUntil(Condition.appear,6000);
+
             Log.info("User was successfully created!");
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,7 +83,7 @@ public class AdminTab {
     public void createdUserSearch() {
         Log.info("Searching for user with the name " + userName);
         try {
-            USERNAME_SEARCH.should(Condition.exist).setValue(userName);
+            USERNAME_SEARCH.shouldBe(Condition.visible).setValue(userName);
             SEARCH_BTN.shouldBe(Condition.visible).click();
             Log.info("The user with name " + userName + "was found.");
         } catch (Exception e) {
