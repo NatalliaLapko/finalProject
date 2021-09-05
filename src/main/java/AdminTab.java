@@ -39,7 +39,7 @@ public class AdminTab {
     String pass = "1ghdf[]dlkfcr4562";
    // String file = "src/main/resources/Testing file.docx";
     String employeeName = "Jadine Jackie";
-    String userName = "Jane Janeson";
+    String userName = "Jenifer Stevens";
 
 
     @Step("Add new user")
