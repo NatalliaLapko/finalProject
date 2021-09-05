@@ -39,7 +39,7 @@ public class AdminTab {
     String pass = "1ghdf[]dlkfcr4562";
    // String file = "src/main/resources/Testing file.docx";
     String employeeName = "Jadine Jackie";
-    String userName = "ane Smith";
+    String userName = "Jane Janeson";
 
 
     @Step("Add new user")
@@ -54,7 +54,7 @@ public class AdminTab {
             PASSWORD.should(Condition.exist).setValue(pass);
             CONFIRM_PASSWORD.should(Condition.exist).setValue(pass);
             SAVE_BTN.shouldBe(Condition.visible).click();
-            SEARCH_BTN.waitUntil(Condition.appear,8000);
+           // SEARCH_BTN.waitUntil(Condition.appear,8000);
 
             Log.info("User was successfully created!");
         } catch (Exception e) {
