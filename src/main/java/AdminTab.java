@@ -54,7 +54,7 @@ public class AdminTab {
             PASSWORD.should(Condition.exist).setValue(pass);
             CONFIRM_PASSWORD.should(Condition.exist).setValue(pass);
             SAVE_BTN.shouldBe(Condition.visible).click();
-            SEARCH_BTN.waitUntil(Condition.appear,8000);
+       
 
             Log.info("User was successfully created!");
         } catch (Exception e) {
